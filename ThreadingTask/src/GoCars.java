@@ -13,21 +13,15 @@ public class GoCars {
 		List<Car> carFinish = new ArrayList<Car>();
 		try{
 			System.out.println("Rice started");
-			      
 			for(Car car: cars){		
-			car.t.join();
-			
-			if(car.getDistanse()>=Car.MAX_DISTANCE){
-				carFinish.add(car);
+				car.t.join();
+				if(car.getDistanse()>=Car.MAX_DISTANCE){
+					carFinish.add(car);
+				}
 			}
-			}
-			
-			
 		} catch(InterruptedException e) {
 			System.out.println("Thread interrupt");
 		}
-		
 		System.out.println("Win "+ carFinish.get(0).name);
-			
-		}
-    }
+	}
+}
