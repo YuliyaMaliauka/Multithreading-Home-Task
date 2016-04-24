@@ -1,6 +1,7 @@
 package draw;
 
 public class Eraser implements Runnable {
+	
 	Artist a;
 	public Eraser(Artist a){
 		this.a = a;
