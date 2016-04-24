@@ -13,10 +13,10 @@ public class Artist {
 		for(int i=0; i<10; i++){
 			s.append("*");
 		}
-			System.out.println("Drawning: "+ s);
-			valueSet = false;
-			notify();
-			return s.toString();
+		System.out.println("Drawning: "+ s);
+		valueSet = false;
+		notify();
+		return s.toString();
 	}
 	synchronized void put(StringBuilder s) {
 		while (valueSet)
@@ -25,11 +25,10 @@ public class Artist {
 			} catch (InterruptedException e) {
 				System.out.println("exception interrupted");
 			}
-			this.s = s;
-			
-			s.delete(0, s.length());
-			valueSet = true;
-			System.out.println("Cleaning: "+ s);
-			notify();
+		this.s = s;
+		s.delete(0, s.length());
+		valueSet = true;
+		System.out.println("Cleaning: "+ s);
+		notify();
 	}
 }
