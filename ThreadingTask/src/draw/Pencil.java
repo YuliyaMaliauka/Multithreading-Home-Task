@@ -7,7 +7,6 @@ public class Pencil implements Runnable {
 		new Thread(this, "Pencil").start();
 	}
 	public void run(){
-		
 		while(true){			
 			a.get();			
 		}			
